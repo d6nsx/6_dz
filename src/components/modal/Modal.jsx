@@ -1,12 +1,12 @@
 import React from 'react';
-import styles from './Modal.css';
+import classes from './Modal.css';
 
 const Modal = ({ pokemon, onClose }) => {
     if (!pokemon) return null;
 
     return (
-        <div className={styles.modaloverlay}>
-            <div className={styles.modalcontent}>
+        <div className={classes.modaloverlay}>
+            <div className={classes.modalcontent}>
                 <h2>{pokemon.name}</h2>
                 <img src={pokemon.sprites.other.dream_world.front_default} alt={pokemon.name} />
                 <p>Height: {pokemon.height}</p>

@@ -4,6 +4,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import PokemonCard from "./components/PokemonCard.jsx";
 import Modal from "./components/modal/Modal.jsx";
+import styles from "./App.css";
 
 const schema = yup.object().shape({
     name: yup.string().required('Name is required'),
@@ -63,9 +64,9 @@ const App = () => {
     };
 
     return (
-        <div>
+        <div className={styles.appContainer}>
             {!isFormSubmitted ? (
-                <form onSubmit={handleSubmit(onSubmit)}>
+                <form onSubmit={handleSubmit(onSubmit)} className={styles.formContainer}>
                     <div>
                         <label>Name:</label>
                         <input {...register('name')} />
@@ -86,14 +87,14 @@ const App = () => {
                         <input {...register('confirmPassword')} type="password" />
                         <p>{errors.confirmPassword?.message}</p>
                     </div>
-                    <button type="submit">Submit</button>
+                    <button type="submit" className={styles.submitButton}>Submit</button>
                 </form>
             ) : (
-                <div>
+                <div className={styles.submittedDataContainer}>
                     <h2>Submitted Data:</h2>
                     <p>Name: {submittedData.name}</p>
                     <p>Email: {submittedData.email}</p>
-                    <PokemonCard pockemon={pokemonData} onCardClick={handleCardClick} />
+                    <PokemonCard pokemon={pokemonData} onCardClick={handleCardClick} />
                     {isModalOpen && <Modal pokemon={selectedPokemon} onClose={closeModal} />}
                 </div>
             )}

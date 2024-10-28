@@ -1,94 +1,71 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background-color: #0d0d0d;
-    font-family: Arial, sans-serif;
-}
-
-h1 {
-    color: #fff;
-    text-align: center;
-    width: 1060px;
-    height: 120px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    margin-bottom: 40px;
-    font-size: 36px;
-}
-
-.pokemon {
-    margin: 0 auto;
-    width: 1060px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 20px;
-}
-
-.card {
-    width: 340px;
-    height: 274px;
-    padding: 15px 12px;
-    gap: 10px;
-    border-radius: 12px;
+.appContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    background: #1a1a1a;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
-}
-
-.card span {
-    font-size: 24px;
-    font-weight: 700;
-    color: rgba(255, 255, 255, 0.9);
-}
-
-.card img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    background: #0d0d0d;
-    padding: 5px;
-    border: 2px solid rgba(255, 255, 255, 0.1);
-}
-
-.card button {
-    width: 316px;
-    height: 42px;
-    padding: 10px;
-    border-radius: 8px;
-    background: linear-gradient(145deg, #db00ff, #8200a1);
-    border: none;
-    font-family: Roboto, sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    text-align: center;
+    background-color: #0d0d0d;
     color: #fff;
-    cursor: pointer;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-    transition: background 0.3s, transform 0.2s;
+    min-height: 100vh;
+    padding: 20px;
 }
 
-.card button:hover {
+.formContainer {
+    width: 300px;
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin-bottom: 40px;
+}
+
+.formContainer label {
+    font-size: 14px;
+    color: #db00ff;
+}
+
+.formContainer input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: #0d0d0d;
+    color: #fff;
+}
+
+.formContainer p {
+    color: rgba(255, 0, 0, 0.8);
+    font-size: 12px;
+    margin-top: -8px;
+    margin-bottom: 8px;
+}
+
+.submitButton {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(145deg, #db00ff, #8200a1);
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.submitButton:hover {
     background: linear-gradient(145deg, #8200a1, #db00ff);
 }
 
-.card button:active {
+.submitButton:active {
     transform: scale(0.95);
+}
+
+.submittedDataContainer {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    color: #fff;
+    width: 320px;
 }

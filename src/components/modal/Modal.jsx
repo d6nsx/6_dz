@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Modal.module.css';
+import styles from './Modal.css';
 
 const Modal = ({ pokemon, onClose }) => {
     if (!pokemon) return null;

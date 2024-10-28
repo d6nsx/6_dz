@@ -4,7 +4,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import PokemonCard from "./components/PokemonCard.jsx";
 import Modal from "./components/modal/Modal.jsx";
-import styles from "./App.css";
+import styles from "./App.module.css";
 
 const schema = yup.object().shape({
     name: yup.string().required('Name is required'),

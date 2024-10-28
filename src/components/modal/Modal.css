@@ -1,4 +1,4 @@
-.modal-overlay {
+.modaloverlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -10,7 +10,7 @@
     align-items: center;
 }
 
-.modal-content {
+.modalcontent {
     background: #1a1a1a;
     padding: 20px;
     border-radius: 8px;
@@ -20,19 +20,27 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
-.modal-content h2 {
+.modalcontent h2 {
     font-size: 24px;
     margin-bottom: 15px;
     color: #db00ff;
 }
 
-.modal-content p {
+.modalcontent p {
     font-size: 16px;
     margin-bottom: 20px;
     color: rgba(255, 255, 255, 0.8);
 }
 
-.modal-content button {
+.modalcontent img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    background: #0d0d0d;
+}
+
+.modalcontent button {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -44,10 +52,10 @@
     transition: background 0.3s;
 }
 
-.modal-content button:hover {
+.modalcontent button:hover {
     background: linear-gradient(145deg, #8200a1, #db00ff);
 }
 
-.modal-content button:active {
+.modalcontent button:active {
     transform: scale(0.95);
 }

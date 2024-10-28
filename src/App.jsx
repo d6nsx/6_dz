@@ -27,13 +27,10 @@ const App = () => {
     });
 
     useEffect(() => {
-        // Функция для получения данных о покемонах из API
         const getPokemonData = async () => {
             try {
                 const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=10');
                 const data = await response.json();
-
-                // Получение деталей для каждого покемона
                 const detailedData = await Promise.all(
                     data.results.map(async (pokemon) => {
                         const res = await fetch(pokemon.url);

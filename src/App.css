@@ -1,13 +1,16 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    background-color: black;
+
+body {
+    background-color: #0d0d0d;
+    font-family: Arial, sans-serif;
 }
-h1{
-    color: white;
+
+h1 {
+    color: #fff;
     text-align: center;
     width: 1060px;
     height: 120px;
@@ -15,55 +18,77 @@ h1{
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    border-bottom: 1px solid rgba(255, 255, 255, 1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     margin-bottom: 40px;
-
-
+    font-size: 36px;
 }
-.pokemon{
+
+.pokemon {
     margin: 0 auto;
-    width:1060px;
+    width: 1060px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 20px;
 }
-.card{
+
+.card {
     width: 340px;
     height: 274px;
-    padding: 15px 12px 15px 12px;
+    padding: 15px 12px;
     gap: 10px;
-    border-radius: 8px ;
+    border-radius: 12px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid rgba(255, 255, 255, 1);
     justify-content: space-between;
+    background: #1a1a1a;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
 .card span {
-    font-family: Arial;
     font-size: 24px;
     font-weight: 700;
-    line-height: 27.6px;
-    color: rgba(255, 255, 255, 1);
-
+    color: rgba(255, 255, 255, 0.9);
 }
-.card img{
+
+.card img {
     width: 120px;
     height: 120px;
+    border-radius: 50%;
+    background: #0d0d0d;
+    padding: 5px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
 }
-.card button{
+
+.card button {
     width: 316px;
     height: 42px;
-    padding: 10px ;
-    gap: 10px;
+    padding: 10px;
     border-radius: 8px;
-    background: rgba(219, 0, 255, 1);
+    background: linear-gradient(145deg, #db00ff, #8200a1);
     border: none;
-    font-family: Roboto;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 22px;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
     text-align: center;
-    color: white;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, transform 0.2s;
+}
+
+.card button:hover {
+    background: linear-gradient(145deg, #8200a1, #db00ff);
+}
+
+.card button:active {
+    transform: scale(0.95);
 }
